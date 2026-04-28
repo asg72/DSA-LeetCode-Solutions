@@ -18,8 +18,8 @@ The solutions are categorized by difficulty and platform:
 - **Environment:** VS Code / LeetCode / CodeChef.
 
 ## 📊 Quick Links
-- [My LeetCode Profile]([INSERT_YOUR_LINK](https://leetcode.com/u/asg23/))
-- [My CodeChef Profile]([INSERT_YOUR_LINK](https://www.codechef.com/users/asg73))
+- [My LeetCode Profile](https://leetcode.com/u/asg23/)
+- [My CodeChef Profile](https://www.codechef.com/users/asg73)
 
 ## 🛠️ How I Approach Problems
 1. **Analyze:** Understand constraints and edge cases.
