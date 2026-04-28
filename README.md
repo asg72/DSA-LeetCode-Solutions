@@ -1,42 +1,30 @@
-# DSA & LeetCode Solutions 🚀
+# 🚀 DSA & Problem Solving Portfolio
 
-Welcome to my repository dedicated to Data Structures and Algorithms. Here, I document my journey through LeetCode and CodeChef, focusing on optimized solutions and clean code.
+Welcome to my central repository for Data Structures and Algorithms. This repo serves as a living record of my problem-solving journey, featuring 500+ solutions aimed at mastering technical interviews and placement assessments.
 
-## 🛠️ Tech Stack
-* **Language:** C++
-* **Concepts:** Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, OOPS.
-* **Tools:** Git, VS Code.
+## 📌 Repository Overview
+This repository is automatically synchronized using **LeetSync** for LeetCode submissions, while CodeChef solutions are maintained manually to ensure a complete archive of my competitive programming progress.
 
-## 📊 Statistics
-* **Problems Solved:** 500+ 
-* **Platform Handles:**
-    * [LeetCode Profile](INSERT_LINK_HERE)
-    * [CodeChef Profile](INSERT_LINK_HERE)
+## 📂 Structure
+The solutions are categorized by difficulty and platform:
+- 🟢 **Easy:** Focus on syntax, basic logic, and fundamental data structures.
+- 🟡 **Medium:** Implementation of core patterns (Sliding Window, Two Pointers, DFS/BFS).
+- 🔴 **Hard:** Complex optimizations, Dynamic Programming, and advanced Graph theory.
+- 🏆 **CodeChef:** Competitive programming challenges and contest solutions.
 
----
+## 💻 Tech Stack
+- **Primary Language:** C++ (C++17/20)
+- **Topics:** Arrays, Strings, Hashing, Trees, Graphs, DP, and OOPS.
+- **Environment:** VS Code / LeetCode / CodeChef.
 
-## 📖 Roadmap & Topics Covered
-- [x] Arrays & Hashing
-- [x] Two Pointers
-- [x] Sliding Window
-- [x] Stack / Queue
-- [x] Binary Search
-- [x] Linked List
-- [x] Trees & Graphs
-- [x] Recursion & Backtracking
-- [x] Dynamic Programming
+## 📊 Quick Links
+- [My LeetCode Profile]([INSERT_YOUR_LINK](https://leetcode.com/u/asg23/))
+- [My CodeChef Profile]([INSERT_YOUR_LINK](https://www.codechef.com/users/asg73))
 
----
-
-## 📂 Repository Structure
-The solutions are organized by difficulty:
-* **Easy:** Fundamental logic and syntax practice.
-* **Medium:** Core algorithmic patterns and data structure manipulation.
-* **Hard:** Complex optimization and advanced data structures.
-
-## 🚀 How to Use
-1. Clone the repository: `git clone https://github.com/YOUR_USERNAME/REPO_NAME.git`
-2. Navigate to a specific problem folder to view the `.cpp` file and logic.
+## 🛠️ How I Approach Problems
+1. **Analyze:** Understand constraints and edge cases.
+2. **Optimize:** Aim for the best Time and Space complexity ($O(N)$, $O(log N)$, etc.).
+3. **Refactor:** Write clean, readable code with meaningful variable names.
 
 ---
-*“Consistent practice is the key to mastering DSA.”*
+*“Consistency is the bridge between goals and accomplishment.”*
