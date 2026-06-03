@@ -1,6 +1,3 @@
-#include <vector>
-#include <algorithm>
-
 class Solution {
 public:
     int earliestFinishTime(vector<int>& landStartTime, vector<int>& landDuration, 
