@@ -1,30 +1,27 @@
 class Solution {
 public:
-    vector<int> pivotArray(vector<int>& nums, int pivot) {
-        vector<int> result;
-        result.reserve(nums.size()); // Optimize memory allocation
+    vector<int> pivotArray(vector<int>& arr, int p) {
+        int n = arr.size();
+        vector<int> ans;
 
-        // Pass 1: Collect elements less than pivot
-        for (int num : nums) {
-            if (num < pivot) {
-                result.push_back(num);
+        int c=0;
+
+        for(int i=0; i<n; i++){
+            if(arr[i]<p){
+                ans.push_back(arr[i]);
+            } else if(arr[i] == p){
+                c++;
             }
         }
-
-        // Pass 2: Collect elements equal to pivot
-        for (int num : nums) {
-            if (num == pivot) {
-                result.push_back(num);
-            }
+        for(int i=0; i<c; i++){
+            ans.push_back(p);
         }
 
-        // Pass 3: Collect elements greater than pivot
-        for (int num : nums) {
-            if (num > pivot) {
-                result.push_back(num);
+        for(int i=0; i<n; i++){
+            if(arr[i]>p){
+                ans.push_back(arr[i]);
             }
         }
-
-        return result;
+        return ans;
     }
 };
