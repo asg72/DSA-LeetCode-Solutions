@@ -3,6 +3,7 @@ public:
     vector<int> pivotArray(vector<int>& arr, int p) {
         int n = arr.size();
         vector<int> ans;
+        ans.reserve(n);
 
         int c=0;
 
