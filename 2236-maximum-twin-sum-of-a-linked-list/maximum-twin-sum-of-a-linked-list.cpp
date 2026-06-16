@@ -1,11 +1,11 @@
 /**
  * Definition for singly-linked list.
  * struct ListNode {
- * int val;
- * ListNode *next;
- * ListNode() : val(0), next(nullptr) {}
- * ListNode(int x) : val(x), next(nullptr) {}
- * ListNode(int x, ListNode *next) : val(x), next(next) {}
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 class Solution {
@@ -14,33 +14,35 @@ public:
         ListNode* slow = head;
         ListNode* fast = head;
         
-        // Step 1: Find the middle of the linked list
-        while (fast && fast->next) {
+        // 1. Move fast by 2 steps and slow by 1 step to find the middle
+        while (fast != nullptr && fast->next != nullptr) {
             slow = slow->next;
             fast = fast->next->next;
         }
         
-        // Step 2: Reverse the second half of the linked list
+        // At this point, 'slow' points to the start of the second half
+        // 2. Reverse the second half of the linked list
         ListNode* prev = nullptr;
         ListNode* curr = slow;
-        while (curr) {
+        while (curr != nullptr) {
             ListNode* nextNode = curr->next;
             curr->next = prev;
             prev = curr;
             curr = nextNode;
         }
         
-        // Step 3: Calculate the maximum twin sum
-        int max_sum = 0;
-        ListNode* first_half = head;
-        ListNode* second_half = prev; // 'prev' is now the head of the reversed second half
+        // 'prev' now points to the head of the reversed second half
+        ListNode* firstHalf = head;
+        ListNode* secondHalf = prev;
+        int maxTwinSum = 0;
         
-        while (second_half) {
-            max_sum = max(max_sum, first_half->val + second_half->val);
-            first_half = first_half->next;
-            second_half = second_half->next;
+        // 3. Iterate through both halves simultaneously to find the max twin sum
+        while (secondHalf != nullptr) {
+            maxTwinSum = max(maxTwinSum, firstHalf->val + secondHalf->val);
+            firstHalf = firstHalf->next;
+            secondHalf = secondHalf->next;
         }
         
-        return max_sum;
+        return maxTwinSum;
     }
 };
