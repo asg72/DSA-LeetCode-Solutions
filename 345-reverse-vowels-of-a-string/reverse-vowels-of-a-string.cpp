@@ -1,7 +1,12 @@
 class Solution {
 public:
     bool isVowel(char ch){
-        return string("aeiouAEIOU").find(ch) != string::npos;
+        switch(ch){
+            case 'a': case 'e': case 'i': case 'o': case 'u':
+            case 'A': case 'E': case 'I': case 'O': case 'U':
+            return true;
+            default: return false ;          
+        }
     }
 
     string reverseVowels(string s) {
