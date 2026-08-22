@@ -12,7 +12,7 @@ public:
         }
 
         if(num%(sum+product) == 0){
-return true;
-    }else return false;
+            return true;
+        } else return false;
     }
 };
