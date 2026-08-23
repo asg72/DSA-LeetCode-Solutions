@@ -16,7 +16,10 @@ public:
             }
         }
 
+        // Optional: Pre-allocate memory to improve performance
         arr1.reserve(arr1.size() + arr2.size());
+
+        // Concatenate arr2 onto the end of arr1
         arr1.insert(arr1.end(), arr2.begin(), arr2.end());
 
         return arr1;
