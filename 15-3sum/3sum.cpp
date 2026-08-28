@@ -7,6 +7,9 @@ public:
         sort(nums.begin(), nums.end());
 
         for (int i = 0; i < n - 2; i++) {
+            // Skip duplicate values for the first element
+            if (i > 0 && nums[i] == nums[i - 1])continue;
+
             int j = i + 1;
             int k = n - 1;
 
@@ -14,6 +17,10 @@ public:
                 int sum = nums[i] + nums[j] + nums[k];
                 if (sum == 0) {
                     arr.push_back({nums[i], nums[j], nums[k]});
+
+                    // Skip duplicate values for second and third elements
+                    while (j < k && nums[j] == nums[j + 1])j++;
+                    while (j < k && nums[k] == nums[k - 1])k--;
 
                     j++; k--;
 
@@ -24,12 +31,7 @@ public:
                 }
             }
         }
-        
-        sort(arr.begin(), arr.end());
-        auto it = unique(arr.begin(), arr.end());
 
-        arr.erase(it, arr.end());
-        
         return arr;
     }
 };
