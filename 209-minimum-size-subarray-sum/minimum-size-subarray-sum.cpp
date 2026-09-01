@@ -18,13 +18,11 @@ public:
 
             high++;
         }
-    
 
-    if (min_len == INT_MAX){
-    return 0;
+        if (min_len == INT_MAX) {
+            return 0;
+        }
+
+        return min_len;
     }
-       
-    
-    return min_len;
-}
 };
