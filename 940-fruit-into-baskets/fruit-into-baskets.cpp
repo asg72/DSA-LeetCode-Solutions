@@ -6,7 +6,6 @@ public:
 
         int low = 0;
         int high = 0;
-
         int max_len = 0;
 
         while (high < n) {
