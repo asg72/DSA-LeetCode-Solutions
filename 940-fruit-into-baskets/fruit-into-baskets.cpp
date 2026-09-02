@@ -20,14 +20,10 @@ public:
                 low++;
             }
 
-            if (f.size() <= 2) {
-                int len = high - low + 1;
-                max_len = max(max_len, len);
-            }
-
+            max_len = max(max_len, high - low + 1);
             high++;
         }
-        
+
         return max_len;
     }
 };
