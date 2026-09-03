@@ -18,7 +18,7 @@ public:
                 low++;
 
                 len = high - low + 1;
-                maxFreq = *std::ranges::max_element(f);
+                // maxFreq = *std::ranges::max_element(f);
                 diff = len - maxFreq;
             }
 
