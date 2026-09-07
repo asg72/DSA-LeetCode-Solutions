@@ -22,9 +22,9 @@ public:
                 low++;
             }
 
-            maxLen = max(maxLen, high - low + 1);
+            maxLen = max(maxLen, high - low);
             high++;
         }
-        return maxLen-1;
+        return maxLen;
     }
 };
