@@ -18,6 +18,7 @@ public:
         if(head == nullptr || head->next == nullptr){
             return nullptr;
         }
+        
         while(fast!=nullptr && fast->next!=nullptr){
             prev=slow;
             slow=slow->next;
