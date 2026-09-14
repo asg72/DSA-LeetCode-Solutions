@@ -1,27 +1,29 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
 class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
-        // Edge Case: If the list has only 1 node, returning nullptr is required.
-        if (head == nullptr || head->next == nullptr) {
+        ListNode* prev = nullptr;
+        ListNode* slow = head;
+        ListNode* fast = head;
+
+        if(head == nullptr || head->next == nullptr){
             return nullptr;
         }
-        
-        ListNode* slow = head;
-        // Start fast one step ahead! 
-        // This offsets slow to stop exactly BEFORE the middle node.
-        ListNode* fast = head->next; 
-        
-        // Use the standard, reliable condition
-        while (fast->next != nullptr && fast->next->next != nullptr) {
-            slow = slow->next;
-            fast = fast->next->next;
+        while(fast!=nullptr && fast->next!=nullptr){
+            prev=slow;
+            slow=slow->next;
+            fast=fast->next->next;
         }
-        
-        // slow is now standing exactly one node before the middle node
-        ListNode* middle = slow->next;     // This is the actual middle node
-        slow->next = middle->next;         // Bypass it
-        delete middle;                     // Free the memory
-        
+        prev->next = slow->next;
         return head;
     }
 };
