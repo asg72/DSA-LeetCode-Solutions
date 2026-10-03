@@ -7,18 +7,15 @@ public:
         }
 
         int left = 0;
-        int right = totalSum - nums[0];
 
-        if (left == right)
-            return 0;
-
-        for (int i = 1; i < nums.size(); i++) {
-            left += nums[i - 1];
-            right -= nums[i];
+        for (int i = 0; i < nums.size(); i++) {
+            int right = totalSum-left-nums[i];
 
             if (left == right) {
                 return i;
             }
+
+            left += nums[i];
         }
 
         return -1;
