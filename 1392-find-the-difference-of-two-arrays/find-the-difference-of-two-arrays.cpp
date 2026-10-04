@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
-        vector<vector<int>> res;
 
         unordered_set<int> arr1(nums1.begin(), nums1.end());
         unordered_set<int> arr2(nums2.begin(), nums2.end());
@@ -21,9 +20,6 @@ public:
             } 
         }
 
-        res.push_back(nums1);
-        res.push_back(nums2);
-
-        return res;
+        return {nums1, nums2};
     }
 };
