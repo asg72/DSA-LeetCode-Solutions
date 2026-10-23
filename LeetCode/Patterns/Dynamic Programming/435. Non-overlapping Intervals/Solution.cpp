@@ -1,10 +1,9 @@
 class Solution {
 public:
     int eraseOverlapIntervals(vector<vector<int>>& intervals) {
-        sort(intervals.begin(), intervals.end(),
-             [](const vector<int>& a, const vector<int>& b) {
-                 return a[1] < b[1];
-             });
+        sort(intervals.begin(), intervals.end(),[](const vector<int>& a, const vector<int>& b){
+            return a[1] < b[1];
+        });
         int n = intervals.size();
 
         int start1 = intervals[0][0];
@@ -14,11 +13,12 @@ public:
             int start2 = intervals[i][0];
             int end2 = intervals[i][1];
 
-            if (end1 > start2) {
+            if (end1 > start2 || start1 == start2) {
                 count++;
-            } else {
-                end1 = start2; // update non-overlapping boundary (start1 isn't even needed!)
+                continue;
             }
+            start1 = start2;
+            end1 = end2;
         }
 
         return count;
