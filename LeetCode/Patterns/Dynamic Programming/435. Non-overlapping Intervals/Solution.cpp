@@ -11,8 +11,9 @@ public:
             int start2 = intervals[i][0];
             int end2 = intervals[i][1];
 
-            if (end1 > start2 && start1 == start2) {
+            if (end1 > start2 || start1 == start2) {
                 count++;
+                continue;
             }
             start1 = start2;
             end1 = end2;
