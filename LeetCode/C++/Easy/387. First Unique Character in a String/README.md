@@ -8,8 +8,8 @@
 Hash Table, String, Queue, Counting
 
 ### 🚀 Performance
-- **Runtime:** 19 ms
-- **Memory:** 14.7 MB
+- **Runtime:** 20 ms
+- **Memory:** 14.5 MB
 
 ---
 
